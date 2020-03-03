@@ -1,0 +1,2 @@
+rootProject.name='animation3d'
+include ':app', ':engine'

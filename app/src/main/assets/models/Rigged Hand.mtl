@@ -1,0 +1,15 @@
+# Blender MTL File: 'untitled.blend'
+# Material Count: 1
+
+newmtl Material.004
+Ns 23.529411
+Ka 1.000000 1.000000 1.000000
+Kd 0.569813 0.450562 0.382238
+Ks 0.135722 0.135722 0.135722
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump D:\\Workspace_2nd\\Android\\72-rigged_hand_obj\\textures\\HAND_N .jpg
+map_Kd D:\\Workspace_2nd\\Android\\72-rigged_hand_obj\\textures\\HAND_N .jpg
+map_Ks D:\\Workspace_2nd\\Android\\72-rigged_hand_obj\\textures\\HAND_S.jpg
