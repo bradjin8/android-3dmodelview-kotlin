@@ -196,10 +196,10 @@ class ModelRenderer(// 3D window (parent component)
 
             // recalculate mvp matrix according to where we are looking at now
             val camera = scene.camera
-            cameraPosInWorldSpace[0] = camera.xPos
-            cameraPosInWorldSpace[1] = camera.yPos
-            cameraPosInWorldSpace[2] = camera.zPos
-            if (camera.hasChanged()) {
+            cameraPosInWorldSpace[0] = camera?.xPos ?: 0f
+            cameraPosInWorldSpace[1] = camera?.yPos ?: 0f
+            cameraPosInWorldSpace[2] = camera?.zPos ?: 0f
+            if (camera!!.hasChanged()) {
                 // INFO: Set the camera position (View matrix)
                 // The camera has 3 vectors (the position, the vector where we are looking at, and the up position (sky)
 
@@ -406,7 +406,7 @@ class ModelRenderer(// 3D window (parent component)
         val scene = main.modelActivity.scene
 
         // draw light
-        if (scene.isDrawLighting) {
+        if (scene!!.isDrawLighting) {
             val lightBulbDrawer = drawer.pointDrawer
 
             // Calculate position of the light in world space to support lighting
@@ -425,9 +425,9 @@ class ModelRenderer(// 3D window (parent component)
                     colorMask, cameraPosInWorldSpace
                 )
             } else {
-                lightPosInWorldSpace[0] = scene.camera.xPos
-                lightPosInWorldSpace[1] = scene.camera.yPos
-                lightPosInWorldSpace[2] = scene.camera.zPos
+                lightPosInWorldSpace[0] = scene.camera?.xPos ?: 0f
+                lightPosInWorldSpace[1] = scene.camera?.yPos ?: 0f
+                lightPosInWorldSpace[2] = scene.camera?.zPos ?: 0f
                 lightPosInWorldSpace[3] = 0f
             }
 

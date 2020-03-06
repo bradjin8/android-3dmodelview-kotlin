@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.headit74.animation3d.activity.ModelActivity
 import org.andresoviedo.android_3d_model_engine.services.wavefront.WavefrontLoader
 import org.andresoviedo.util.android.AndroidURLStreamHandlerFactory
-import org.andresoviedo.util.android.AssetUtils
 import org.andresoviedo.util.android.ContentUtils
 import java.net.URL
 

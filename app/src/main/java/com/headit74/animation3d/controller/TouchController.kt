@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
-import com.headit74.animation3d.controller.TouchScreen
 import com.headit74.animation3d.view.ModelRenderer
 import com.headit74.animation3d.view.ModelSurfaceView
 
@@ -184,7 +183,7 @@ class TouchController(private val view: ModelSurfaceView, private val mRenderer:
                 // Log.v(TAG, "Translating camera (dx,dy) '" + dx1 + "','" + dy1 + "'...");
                 dx1 = (dx1 / max * Math.PI * 2).toFloat()
                 dy1 = (dy1 / max * Math.PI * 2).toFloat()
-                camera.translateCamera(dx1, dy1)
+                camera?.translateCamera(dx1, dy1)
             } else if (pointerCount == 2) {
                 if (fingersAreClosing) {
                     touchStatus = TOUCH_STATUS_ZOOMING_CAMERA
@@ -193,7 +192,7 @@ class TouchController(private val view: ModelSurfaceView, private val mRenderer:
                         TAG,
                         "Zooming '$zoomFactor'..."
                     )
-                    camera.MoveCameraZ(zoomFactor)
+                    camera?.MoveCameraZ(zoomFactor)
                 }
                 if (isRotating) {
                     touchStatus = TOUCH_STATUS_ROTATING_CAMERA
@@ -201,7 +200,7 @@ class TouchController(private val view: ModelSurfaceView, private val mRenderer:
                         TAG,
                         "Rotating camera '" + Math.signum(rotationVector[2]) + "'..."
                     )
-                    camera.Rotate((Math.signum(rotationVector[2]) / Math.PI).toFloat() / 4)
+                    camera?.Rotate((Math.signum(rotationVector[2]) / Math.PI).toFloat() / 4)
                 }
             }
 

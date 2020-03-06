@@ -49,7 +49,7 @@ class ModelActivity : Activity() {
     var scene: SceneLoader? = null
         private set
     private var handler: Handler? = null
-    override fun onCreate(savedInstanceState: Bundle) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Try to get input parameters
