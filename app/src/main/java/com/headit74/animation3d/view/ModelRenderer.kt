@@ -93,9 +93,9 @@ class ModelRenderer(// 3D window (parent component)
      * Did the application explode?
      */
     private var fatalException = false
-    val near: Float = 0.0f
+    val near: Float = 1f
 
-    val far: Float = 1.0f
+    val far: Float = 100f
 
     override fun onSurfaceCreated(
         unused: GL10,
